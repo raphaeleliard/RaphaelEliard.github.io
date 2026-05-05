@@ -1,86 +1,96 @@
----
-// src/pages/projets.astro
----
-
+<!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Mes Projets - Raphaël Eliard</title>
-	</head>
-	
-	<body class="bg-[#10141d] min-h-screen font-sans relative overflow-x-hidden p-6 md:p-12">
-		
-		<!-- Halos de lumière décoratifs (Rappel de l'accueil) -->
-		<div class="absolute w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[150px] top-0 left-1/2 -translate-x-1/2 z-0"></div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raphaël Eliard - Ingénieur & Projets</title>
+    
+    <!-- C'est cette ligne magique qui charge tout le design sans rien installer -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 text-zinc-300 min-h-screen font-sans selection:bg-zinc-700 selection:text-white">
+    
+    <main class="max-w-5xl mx-auto px-6 py-20 md:py-32">
+        
+        <!-- SECTION EXPLICATION (Header) -->
+        <header class="mb-20 max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-4">
+                Raphaël Eliard.
+            </h1>
+            <h2 class="text-xl text-zinc-400 font-medium mb-8">
+                Ingénieur BTP & Nucléaire <span class="mx-2 text-zinc-600">|</span> Développeur
+            </h2>
+            <p class="text-zinc-400 leading-relaxed text-lg">
+                Bienvenue sur mon espace personnel. Ce site sert de répertoire central pour documenter mes travaux et héberger mes applications. Vous trouverez ci-dessous une sélection de mes projets informatiques, développés pour répondre à des problématiques d'ingénierie ou expérimenter de nouvelles technologies.
+            </p>
+        </header>
 
-		<main class="relative z-10 max-w-6xl mx-auto">
-			
-			<!-- Bouton Retour -->
-			<a href="/" class="inline-flex items-center text-slate-400 hover:text-white transition-colors mb-10 group">
-				<span class="mr-2 group-hover:-translate-x-1 transition-transform">←</span> Retour à l'accueil
-			</a>
+        <!-- SECTION TUILES (Grille de projets) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-			<!-- En-tête de la page -->
-			<div class="mb-16">
-				<h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-					Mon Portfolio Tech <span class="text-blue-400">/</span>
-				</h1>
-				<p class="text-slate-400 text-lg max-w-2xl">
-					Une sélection de mes projets informatiques, scripts et expérimentations développés en parallèle de mon parcours en ingénierie BTP et Nucléaire.
-				</p>
-			</div>
+            <!-- Tuile Projet 1 -->
+            <!-- Remplace le '#' par le vrai lien vers ton projet (ex: https://mon-projet.com ou un autre fichier .html) -->
+            <a href="#" class="group block p-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-200">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium text-white">Automatisation Calculs</h3>
+                    <span class="text-zinc-500 group-hover:text-white transition-colors">↗</span>
+                </div>
+                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                    Script Python développé pour automatiser le traitement de données complexes issues de capteurs de contrainte sur site.
+                </p>
+                <div class="flex gap-2">
+                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Python</span>
+                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Data</span>
+                </div>
+            </a>
 
-			<!-- GRILLE DES PROJETS -->
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tuile Projet 2 -->
+            <a href="#" class="group block p-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-200">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium text-white">Dashboard Chantier</h3>
+                    <span class="text-zinc-500 group-hover:text-white transition-colors">↗</span>
+                </div>
+                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                    Interface permettant de visualiser l'avancée logistique d'un projet de construction en temps réel.
+                </p>
+                <div class="flex gap-2">
+                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Web App</span>
+                </div>
+            </a>
 
-				<!-- Projet 1 : Exemple Python -->
-				<article class="flex flex-col p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300">
-					<div class="h-40 bg-black/30 rounded-xl mb-6 flex items-center justify-center border border-white/5">
-						<span class="text-5xl">🐍</span>
-					</div>
-					<h2 class="text-xl font-bold text-white mb-2">Automatisation de calculs</h2>
-					<p class="text-slate-300 text-sm mb-6 flex-grow">
-						Script Python développé pour automatiser le traitement de données complexes issues de capteurs de contrainte sur site.
-					</p>
-					<div class="flex gap-3 mt-auto">
-						<span class="px-3 py-1 text-xs font-medium bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/20">Python</span>
-						<span class="px-3 py-1 text-xs font-medium bg-slate-500/20 text-slate-300 rounded-full border border-slate-500/20">Pandas</span>
-					</div>
-				</article>
+            <!-- Tuile Projet 3 (Confidentiel) -->
+            <a href="#" class="group block p-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-200">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium text-white text-red-400">Outil Interne</h3>
+                    <span class="text-zinc-500 group-hover:text-white transition-colors">🔒</span>
+                </div>
+                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                    Développement d'un utilitaire spécifique pour le secteur nucléaire. Accès restreint.
+                </p>
+                <div class="flex gap-2">
+                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">C++</span>
+                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Privé</span>
+                </div>
+            </a>
 
-				<!-- Projet 2 : Exemple Web App -->
-				<article class="flex flex-col p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300">
-					<div class="h-40 bg-black/30 rounded-xl mb-6 flex items-center justify-center border border-white/5">
-						<span class="text-5xl">⚛️</span>
-					</div>
-					<h2 class="text-xl font-bold text-white mb-2">Dashboard Suivi Chantier</h2>
-					<p class="text-slate-300 text-sm mb-6 flex-grow">
-						Interface web permettant de visualiser l'avancée logistique d'un projet de construction en temps réel.
-					</p>
-					<div class="flex gap-3 mt-auto">
-						<span class="px-3 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-300 rounded-full border border-cyan-500/20">React</span>
-						<span class="px-3 py-1 text-xs font-medium bg-green-500/20 text-green-300 rounded-full border border-green-500/20">Node.js</span>
-					</div>
-				</article>
+            <!-- Tuile 4 (Bouton CV / Profil) -->
+            <a href="mon-cv.html" class="group block p-8 rounded-xl bg-transparent border border-dashed border-zinc-700 hover:border-zinc-400 hover:bg-zinc-900/50 transition-all duration-200 flex flex-col items-center justify-center text-center">
+                <span class="text-2xl mb-2 text-zinc-500 group-hover:text-zinc-300 transition-colors">📄</span>
+                <h3 class="text-lg font-medium text-zinc-300 group-hover:text-white transition-colors">Consulter mon CV</h3>
+                <p class="text-zinc-500 text-sm mt-2">Parcours BTP & Nucléaire</p>
+            </a>
 
-				<!-- Projet 3 : Exemple Espace Privé -->
-				<article class="flex flex-col p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-red-500/50 transition-all duration-300">
-					<div class="h-40 bg-red-950/30 rounded-xl mb-6 flex items-center justify-center border border-red-500/10">
-						<span class="text-5xl">☢️</span>
-					</div>
-					<h2 class="text-xl font-bold text-white mb-2">Outil Interne (Confidentiel)</h2>
-					<p class="text-slate-300 text-sm mb-6 flex-grow">
-						Développement d'un utilitaire spécifique pour le secteur nucléaire. Code source privé en raison des normes de sécurité.
-					</p>
-					<div class="flex gap-3 mt-auto">
-						<span class="px-3 py-1 text-xs font-medium bg-red-500/20 text-red-300 rounded-full border border-red-500/20">C++</span>
-						<span class="px-3 py-1 text-xs font-medium bg-slate-500/20 text-slate-300 rounded-full border border-slate-500/20">Sécruité</span>
-					</div>
-				</article>
+        </div>
 
-			</div>
-		</main>
-	</body>
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t border-zinc-800 text-zinc-500 text-sm flex justify-between items-center">
+            <p>© 2026 Raphaël Eliard.</p>
+            <div class="flex gap-4">
+                <a href="https://github.com/RaphaelEliard" target="_blank" class="hover:text-zinc-300 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-zinc-300 transition-colors">LinkedIn</a>
+            </div>
+        </footer>
+
+    </main>
+</body>
 </html>
