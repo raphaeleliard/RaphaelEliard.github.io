@@ -3,94 +3,114 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Raphaël Eliard, Ingénieur Génie Civil Nucléaire et développeur d'outils web." />
+    
+    <!-- Open Graph / Réseaux Sociaux (LinkedIn, Discord, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.raphaeleliard.dev/" />
+    <meta property="og:title" content="Raphaël Eliard - Ingénieur & Développeur" />
+    <meta property="og:description" content="Découvrez mes projets informatiques développés pour répondre à des problématiques d'ingénierie." />
+    <meta property="og:image" content="https://www.raphaeleliard.dev/assets/preview.png" />
+
     <title>Raphaël Eliard - Projets</title>
     
-    <!-- C'est cette ligne magique qui charge tout le design sans rien installer -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-zinc-300 min-h-screen font-sans selection:bg-zinc-700 selection:text-white">
+<body class="bg-zinc-950 text-zinc-300 min-h-screen font-sans selection:bg-zinc-700 selection:text-white relative z-0">
     
+    <div class="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-zinc-900 to-transparent pointer-events-none -z-10"></div>
+
     <main class="max-w-5xl mx-auto px-6 py-20 md:py-32">
         
-        <!-- SECTION EXPLICATION (Header) -->
         <header class="mb-20 max-w-2xl">
-            <h1 class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500 tracking-tight mb-4 text-balance">
                 Raphaël Eliard.
             </h1>
-            <h2 class="text-xl text-zinc-400 font-medium mb-8">
-                Ingénieur Génie Civil Nucléaire <span class="mx-2 text-zinc-600">|</span> Développeur d'outils personnels
+            <h2 class="text-[clamp(0.55rem,2.5vw,1.25rem)] text-zinc-400 font-medium mb-8 whitespace-nowrap overflow-hidden text-ellipsis">
+                Ingénieur Génie Civil Nucléaire <span class="mx-1 md:mx-2 text-zinc-600">|</span> <span class="text-zinc-300">Développement d'outils web</span>
             </h2>
-            <p class="text-zinc-400 leading-relaxed text-lg">
+            <p class="text-zinc-400 leading-relaxed text-lg text-pretty">
                 Bienvenue sur mon espace personnel. Ce site sert de répertoire central pour documenter mes travaux et héberger mes applications. Vous trouverez ci-dessous une sélection de mes projets informatiques, développés pour répondre à des problématiques d'ingénierie ou expérimenter des technologies.
             </p>
         </header>
 
-        <!-- SECTION TUILES (Grille de projets) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Tuile Projet 1 -->
-            <!-- Remplace le '#' par le vrai lien vers ton projet (ex: https://mon-projet.com ou un autre fichier .html) -->
-            <a href="#" class="group block p-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-200">
+            <a href="https://www.raphaeleliard.dev/PMO/" class="group flex flex-col h-full p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-medium text-white">Outil de PMO en ingénierie</h3>
-                    <span class="text-zinc-500 group-hover:text-white transition-colors">↗</span>
+                    <h3 class="text-lg font-medium text-white group-hover:text-zinc-100 transition-colors">Outil de PMO en ingénierie</h3>
+                    <span class="text-zinc-600 group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                 </div>
-                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
-                    Outil web en single-page développé pour répondre aux problématiques de gestions des heures d'études dans un contexte complexe et confidentiel
+                <p class="text-zinc-400 text-sm mb-6 flex-grow text-pretty">
+                    Outil web en single-page développé pour répondre aux problématiques de gestion des heures d'études dans un contexte complexe et confidentiel.
                 </p>
-                <div class="flex gap-2">
-                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">HTML</span>
-                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Data</span>
-                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Project Management</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Web App</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Data Analysis</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Project Management</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">KPI</span>
                 </div>
             </a>
 
-            <!-- Tuile Projet 2 -->
-            <a href="https://raphaeleliard.github.io/Gestion-Budget/" class="group block p-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-200">
+            <a href="https://www.raphaeleliard.dev/Calcul-Beton-Arme/" class="group flex flex-col h-full p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-medium text-white">Gestion de budget</h3>
-                    <span class="text-zinc-500 group-hover:text-white transition-colors">↗</span>
+                    <h3 class="text-lg font-medium text-white group-hover:text-zinc-100 transition-colors">Calcul Béton Armé</h3>
+                    <span class="text-zinc-600 group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                 </div>
-                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
-                    Outil créer pour répondre à un besoin de gestion de budget personnel en local.
+                <p class="text-zinc-400 text-sm mb-6 flex-grow text-pretty">
+                    Outil de calcul de structure en béton armé complet, multi-pages et automatisé, avec visualisation des plans de ferraillage.
                 </p>
-                <div class="flex gap-2">
-                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Web Tool</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Web App</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Calcul EC2</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Visualisation</span>
                 </div>
             </a>
 
-            <!-- Tuile Projet 3 (Confidentiel) -->
-            <a href="#" class="group block p-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-200">
+            <a href="https://www.raphaeleliard.dev/Gestion-Budget/" class="group flex flex-col h-full p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-medium text-white text-red-400">Outil de calcul</h3>
-                    <span class="text-zinc-500 group-hover:text-white transition-colors"></span>
+                    <h3 class="text-lg font-medium text-white group-hover:text-zinc-100 transition-colors">Gestion de budget</h3>
+                    <span class="text-zinc-600 group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                 </div>
-                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
-                    Outil de calcul de structure béton armé complet et automatisé avec visualisation des plans de feraillage
+                <p class="text-zinc-400 text-sm mb-6 flex-grow text-pretty">
+                    Outil créé pour répondre à un besoin de gestion de budget personnel, sécurisé et exécuté en local.
                 </p>
-                <div class="flex gap-2">
-                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Web Tool</span>
-                    <span class="px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded border border-zinc-700">Calcul</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Web App</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-full border border-zinc-700/50">Data Analysis</span>
                 </div>
             </a>
 
-            <!-- Tuile 4 (Bouton CV / Profil) -->
-            <a href="mon-cv.html" class="group block p-8 rounded-xl bg-transparent border border-dashed border-zinc-700 hover:border-zinc-400 hover:bg-zinc-900/50 transition-all duration-200 flex flex-col items-center justify-center text-center">
-                <span class="text-2xl mb-2 text-zinc-500 group-hover:text-zinc-300 transition-colors">📄</span>
-                <h3 class="text-lg font-medium text-zinc-300 group-hover:text-white transition-colors">Consulter mon CV</h3>
-                <p class="text-zinc-500 text-sm mt-2">Parcours Professionnel</p>
+            <div class="p-8 rounded-2xl bg-zinc-900/30 border border-dashed border-zinc-800/80 flex flex-col h-full items-center justify-center text-center">
+                <span class="text-3xl mb-3 text-zinc-700">🚧</span>
+                <h3 class="text-lg font-medium text-zinc-500">Outil en développement</h3>
+                <p class="text-zinc-600 text-sm mt-2 flex-grow text-pretty">Prochainement disponible...</p>
+                <div class="flex flex-wrap gap-2 mt-6 justify-center">
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/30 text-zinc-500 rounded-full border border-zinc-700/50">Web App</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/30 text-zinc-500 rounded-full border border-zinc-700/50">Gestion de BDD</span>
+                    <span class="px-3 py-1 text-xs font-medium bg-zinc-800/30 text-zinc-500 rounded-full border border-zinc-700/50">Back-End</span>
+                </div>
+            </div>
+
+            <a href="https://www.linkedin.com/in/raphaeleliard" target="_blank" aria-label="Voir mon profil LinkedIn" class="group p-8 rounded-2xl bg-transparent border border-dashed border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/30 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full items-center justify-center text-center">
+                <span class="text-3xl mb-3 text-zinc-600 group-hover:text-[#0a66c2] transition-all duration-300 group-hover:scale-110">💼</span>
+                <h3 class="text-lg font-medium text-zinc-300 group-hover:text-white transition-colors">Parcours Professionnel</h3>
+                <p class="text-zinc-500 text-sm mt-2">Voir mon profil LinkedIn</p>
+            </a>
+
+            <a href="mailto:admin@raphaeleliard.dev" aria-label="M'envoyer un email" class="group p-8 rounded-2xl bg-transparent border border-dashed border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/30 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full items-center justify-center text-center">
+                <span class="text-3xl mb-3 text-zinc-600 group-hover:text-zinc-300 transition-all duration-300 group-hover:scale-110">✉️</span>
+                <h3 class="text-lg font-medium text-zinc-300 group-hover:text-white transition-colors">Me contacter</h3>
+                <p class="text-zinc-500 text-sm mt-2">M'envoyer un email</p>
             </a>
 
         </div>
 
-        <!-- Footer -->
-        <footer class="mt-24 pt-8 border-t border-zinc-800 text-zinc-500 text-sm flex justify-between items-center">
-            <p>© 2026 Raphaël Eliard.</p>
-            <div class="flex gap-4">
-                <a href="#" class="hover:text-zinc-300 transition-colors">LinkedIn</a>
-            </div>
+        <footer class="mt-24 pt-8 border-t border-zinc-800 text-zinc-500 text-sm flex justify-center items-center">
+            <p>© <span id="current-year">2024</span> Raphaël Eliard.</p>
         </footer>
 
     </main>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
